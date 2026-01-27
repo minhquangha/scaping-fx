@@ -1,20 +1,8 @@
 import { prisma } from '@/lib/prisma';
 import axios from 'axios';
+import type { VangTodayResponse } from '@/types/price';
 
 const API_URL = 'https://www.vang.today/api/prices?type=XAUUSD';
-
-interface VangTodayResponse {
-    success: boolean;
-    timestamp: number;
-    time: string;
-    date: string;
-    type: string;
-    name: string;
-    buy: number;
-    sell: number;
-    change_buy: number;
-    change_sell: number;
-}
 
 const fetchPrice = async (): Promise<void> => {
     try {

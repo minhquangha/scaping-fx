@@ -64,4 +64,14 @@ interface ToggleActiveResponse {
     error?: string;
 }
 
-export type { AdminLoginRequest, AdminLoginResponse, DeleteUserResponse, GetUsersResponse, LoginRequest, LoginResponse, RegisterRequest, RegisterResponse, ToggleActiveResponse, User };
+interface JwtPayload {
+    userId: number;
+    username: string;
+}
+
+interface AdminSession {
+    id: number;
+    username: string;
+}
+
+export type { AdminLoginRequest, AdminLoginResponse, AdminSession, DeleteUserResponse, GetUsersResponse, JwtPayload, LoginRequest, LoginResponse, RegisterRequest, RegisterResponse, ToggleActiveResponse, User };

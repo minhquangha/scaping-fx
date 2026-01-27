@@ -22,7 +22,9 @@ const GET = async (): Promise<NextResponse<PriceData>> => {
                 change: 0,
                 changePercent: 0,
                 buy: 0,
-                changeBuy: 0
+                changeBuy: 0,
+                sell: 0,
+                changeSell: 0
             };
 
             return NextResponse.json(fallbackData);
@@ -50,7 +52,9 @@ const GET = async (): Promise<NextResponse<PriceData>> => {
             change: Number.parseFloat(change.toFixed(2)),
             changePercent: Number.parseFloat(changePercent.toFixed(2)),
             buy: latestPrice.buy,
-            changeBuy: latestPrice.change_buy
+            changeBuy: latestPrice.change_buy,
+            sell: latestPrice.sell,
+            changeSell: latestPrice.change_sell
         };
 
         return NextResponse.json(priceData);
@@ -63,7 +67,9 @@ const GET = async (): Promise<NextResponse<PriceData>> => {
             change: 0,
             changePercent: 0,
             buy: 0,
-            changeBuy: 0
+            changeBuy: 0,
+            sell: 0,
+            changeSell: 0
         };
 
         return NextResponse.json(fallbackData);

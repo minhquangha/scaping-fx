@@ -1,10 +1,6 @@
 import { SignJWT, jwtVerify } from 'jose';
 import 'server-only';
-
-interface JwtPayload {
-    userId: number;
-    username: string;
-}
+import type { JwtPayload } from '@/types/api';
 
 const secretKey = process.env.JWT_SECRET || 'fallback-secret-key-change-in-production';
 const encodedKey = new TextEncoder().encode(secretKey);

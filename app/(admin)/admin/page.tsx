@@ -1,14 +1,9 @@
 'use client';
 
-import type { User } from '@/types/api';
+import type { AdminSession, User } from '@/types/api';
 import axios from 'axios';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
-
-interface AdminSession {
-    id: number;
-    username: string;
-}
 
 const AdminPage: FC = () => {
     const [users, setUsers] = useState<User[]>([]);

@@ -2,6 +2,8 @@ import { prisma } from '@/lib/prisma';
 import type { LoginRequest, LoginResponse } from '@/types/api';
 import { NextResponse } from 'next/server';
 
+// TODO: response JWT token
+
 const POST = async (request: Request) => {
     try {
         const body = (await request.json()) as LoginRequest;

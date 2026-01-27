@@ -19,7 +19,8 @@
       "Bash(pnpm prisma db seed:*)",
       "mcp__context7__query-docs",
       "Bash(ls:*)",
-      "mcp__context7__resolve-library-id"
+      "mcp__context7__resolve-library-id",
+      "mcp__ide__getDiagnostics"
     ]
   },
   "enableAllProjectMcpServers": true,
